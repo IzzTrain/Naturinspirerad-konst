@@ -10,9 +10,22 @@
   <div class="inputsection">
     <div class="inputs">
       <input placeholder="Vad söker du?"></input>
+    </div class="resultSection"><div>
     </div>
-    <button>Bli inspirerad</button>
+    <button class="addOption">Bli inspirerad</button>
   </div>
+  <div class="resultSection"></div>
   <button>Kör!</button>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+     <script>
+       $(function() {
+         $('.resultSection').hide()
+         var add_option = function() {
+           $('.inputs').append('<input></input>')
+         }
+         $('.addOption').click(add_option)
+       })
+  </script>
 </body>
 </html>
